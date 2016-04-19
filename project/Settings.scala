@@ -230,6 +230,14 @@ object Settings extends Build {
         case PathList("META-INF", "io.netty.versions.properties") => MergeStrategy.last
         case x => old(x)
       }
+    },
+    assemblyShadeRules in assembly := {
+      val shadePackage = "shade.com.datastax.spark.connector"
+      Seq(
+        ShadeRule.rename("com.datastax.cassandra.driver.**" -> s"$shadePackage.driver.@1").inAll,
+        ShadeRule.rename("com.google.common.**" -> s"$shadePackage.google.common.@1").inAll,
+        ShadeRule.rename("io.netty.**" -> s"$shadePackage.netty.@1").inAll
+      )
     }
   )
 
