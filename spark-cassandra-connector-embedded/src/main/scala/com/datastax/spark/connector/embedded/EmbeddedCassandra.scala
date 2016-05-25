@@ -132,7 +132,8 @@ object EmbeddedCassandra {
       "rpc_address"           -> host,
       "listen_address"        -> host,
       "cluster_name"          -> getClusterName(index),
-      "keystore_path"         -> ClassLoader.getSystemResource("keystore").getPath)
+      "keystore_path"         -> ClassLoader.getSystemResource("keystore").getPath,
+      "truststore_path"       -> ClassLoader.getSystemResource("truststore").getPath)
   }
 
   def getStoragePort(index: Integer) = 7000 + index

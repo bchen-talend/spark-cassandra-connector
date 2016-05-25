@@ -34,6 +34,11 @@ spark.cassandra.connection.ssl.trustStore.password   | trust store password     
 spark.cassandra.connection.ssl.trustStore.type       | trust store type                                                  | JKS
 spark.cassandra.connection.ssl.protocol              | SSL protocol                                                      | TLS
 spark.cassandra.connection.ssl.enabledAlgorithms     | SSL cipher suites                                                 | TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA
+spark.cassandra.connection.ssl.client.auth.enabled   | enable 2-way secure connection to Cassandra cluster               | false
+spark.cassandra.connection.ssl.keyStore.path       | path for the key store being used                               | None
+spark.cassandra.connection.ssl.keyStore.password   | key store password                                              | None
+spark.cassandra.connection.ssl.keyStore.type       | key store type                                                  | JKS
+
 
 Notes:
 
