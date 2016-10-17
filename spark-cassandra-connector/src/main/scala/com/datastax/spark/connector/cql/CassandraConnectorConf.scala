@@ -223,7 +223,7 @@ object CassandraConnectorConf extends Logging {
     description = """SSL cipher suites""")
 
   val SSLClientAuthEnabledParam = ConfigParameter[Boolean](
-    name = "spark.cassandra.connection.ssl.client.auth.enabled",
+    name = "spark.cassandra.connection.ssl.clientAuth.enabled",
     section = ReferenceSectionSSL,
     default = DefaultCassandraSSLConf.clientAuthEnabled,
     description = """Enable 2-way secure connection to Cassandra cluster""")
