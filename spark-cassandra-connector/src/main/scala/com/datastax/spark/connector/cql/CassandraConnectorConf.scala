@@ -140,7 +140,7 @@ object CassandraConnectorConf extends Logging {
   val CassandraConnectionSSLTrustStoreTypeProperty = "spark.cassandra.connection.ssl.trustStore.type"
   val CassandraConnectionSSLProtocolProperty = "spark.cassandra.connection.ssl.protocol"
   val CassandraConnectionSSLEnabledAlgorithmsProperty = "spark.cassandra.connection.ssl.enabledAlgorithms"
-  val CassandraConnectionSSLClientAuthEnabledProperty = "spark.cassandra.connection.ssl.client.auth.enabled"
+  val CassandraConnectionSSLClientAuthEnabledProperty = "spark.cassandra.connection.ssl.clientAuth.enabled"
   val CassandraConnectionSSLKeyStorePathProperty = "spark.cassandra.connection.ssl.keyStore.path"
   val CassandraConnectionSSLKeyStorePasswordProperty = "spark.cassandra.connection.ssl.keyStore.password"
   val CassandraConnectionSSLKeyStoreTypeProperty = "spark.cassandra.connection.ssl.keyStore.type"
