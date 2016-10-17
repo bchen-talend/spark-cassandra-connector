@@ -349,6 +349,7 @@ object Settings extends Build {
     assemblyShadeRules in assembly := {
       val shadePackage = "shade.com.datastax.spark.connector"
       Seq(
+        ShadeRule.rename("com.datastax.driver.**" -> s"$shadePackage.driver.@1").inAll,
         ShadeRule.rename("com.google.common.**" -> s"$shadePackage.google.common.@1").inAll
       )
     }
